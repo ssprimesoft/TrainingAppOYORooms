@@ -38,7 +38,7 @@
                     android:layout_marginStart="5dp"
                     android:layout_marginTop="10dp"
                     android:text="Hotel Name"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
 
@@ -71,7 +71,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tvName"
-                    android:layout_margin="@dimen/home_fragment_margin"
+                    android:layout_marginStart="@dimen/home_fragment_margin"
+                    android:layout_marginTop="@dimen/home_fragment_margin"
+                    android:layout_marginEnd="@dimen/home_fragment_margin"
+                    android:layout_marginBottom="@dimen/home_fragment_margin"
                     android:text="City and Description"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textStyle="bold" />

@@ -5,7 +5,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="exit_msg">Are You Sure You Want To Exit?</string>
+    <string name="exit_msg">Are you sure you want to Exit?</string>
     <string name="firebase_referance_uri">https://oyo-rooms-test-default-rtdb.firebaseio.com/</string>
     <string name="icon_uri">https://redirect.field59.com/video/thumb/ce96d60ded0765b49846446a40c48d5584539694</string>
 

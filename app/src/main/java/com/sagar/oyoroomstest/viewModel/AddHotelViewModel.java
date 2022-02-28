@@ -4,9 +4,11 @@ import android.view.View;
 
 import androidx.databinding.BaseObservable;
 
+import com.android.volley.toolbox.ImageLoader;
 import com.sagar.oyoroomstest.R;
 import com.sagar.oyoroomstest.databinding.ActivityAddHotelBinding;
 import com.sagar.oyoroomstest.databinding.ActivityDetailsBinding;
+import com.sagar.oyoroomstest.network.CustomVolleyRequest;
 import com.sagar.oyoroomstest.view.AddHotelActivity;
 import com.sagar.oyoroomstest.view.DetailsActivity;
 
@@ -22,6 +24,8 @@ public class AddHotelViewModel extends BaseObservable {
 
     private void initialiseComponants() {
 
+        ImageLoader imageLoader = CustomVolleyRequest.getInstance(activity).getImageLoader();
+        imageLoader.get(activity.getString(R.string.icon_uri), ImageLoader.getImageListener(binding.imageViewPoster, R.mipmap.ic_launcher, R.mipmap.ic_launcher));
     }
 
     public void onClick(View v) {
