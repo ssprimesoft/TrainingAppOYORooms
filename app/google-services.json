@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "989284483565",
+    "firebase_url": "https://oyo-rooms-test-default-rtdb.firebaseio.com",
+    "project_id": "oyo-rooms-test",
+    "storage_bucket": "oyo-rooms-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:989284483565:android:f77c8877430ea58af8e7e4",
+        "android_client_info": {
+          "package_name": "com.sagar.oyoroomstest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "989284483565-bam1m1ci4ndjrhfljoiaqmcrkqf2v1t0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDj48l_VSyCgLl110PKLegeLy18BZ-bp38"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "989284483565-bam1m1ci4ndjrhfljoiaqmcrkqf2v1t0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!--Home Fragment-->
+	<integer name="home_fragment_recycler_view_span">2</integer>
+
+</resources>

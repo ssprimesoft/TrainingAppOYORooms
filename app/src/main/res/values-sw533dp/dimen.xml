@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="card_elevation">4dp</dimen>
+
+    <!--Splash Screen-->
+    <dimen name="splash_image_height">130dp</dimen>
+    <dimen name="splash_loader_margin">15dp</dimen>
+
+    <!--Home Fragment-->
+    <dimen name="home_fragment_card_height">160dp</dimen>
+    <dimen name="home_fragment_slider_height">150dp</dimen>
+    <dimen name="home_fragment_slider_navigator_height">5dp</dimen>
+    <dimen name="home_fragment_margin">4dp</dimen>
+    <dimen name="home_fragment_row_height">80dp</dimen>
+
+</resources>

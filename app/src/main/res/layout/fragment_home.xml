@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.sagar.oyoroomstest.viewModel.HomeFragmentViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_color"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layoutSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/purple_500"
+                android:onClick="@{(v) -> viewModel.onClick(v)}"
+                android:padding="7dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_search">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="6dp"
+                        card_view:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:id="@+id/search"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/app_name"
+                            app:srcCompat="@drawable/ic_search"
+                            app:tint="@color/grey" />
+
+                        <com.sagar.oyoroomstest.utils.CustomTextViewMedium
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/home_fragment_margin"
+                            android:layout_weight="1"
+                            android:gravity="fill_horizontal"
+                            android:text="@string/search_msg" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/icon_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/home_fragment_card_height"
+                android:layout_below="@id/layoutSearch"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/home_fragment_margin"
+                android:background="@color/white"
+                app:cardBackgroundColor="@android:color/transparent"
+                card_view:cardElevation="@dimen/card_elevation">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+
+                    <LinearLayout
+                        android:id="@+id/SliderDots"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/home_fragment_slider_navigator_height"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/home_fragment_margin"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="horizontal" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHotelList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/icon_card_view"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="@integer/home_fragment_recycler_view_span" />
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

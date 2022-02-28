@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/HP/AndroidStudioProjects/OYORoomsTest/app/src/main/res/drawable-v24/bg_search.xml" value="0.1125" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/OYORoomsTest/app/src/main/res/drawable/bg_search.xml" value="0.1125" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/OYORoomsTest/app/src/main/res/drawable/bg_splash_gradient.xml" value="0.1" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/OYORoomsTest/app/src/main/res/drawable/header_background_element.xml" value="0.1638888888888889" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/OYORoomsTest/app/src/main/res/drawable/ic_baseline_navigate_next_24.xml" value="0.1638888888888889" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/OYORoomsTest/app/src/main/res/drawable/ic_baseline_star_rate_24.xml" value="0.12291666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/OYORoomsTest/app/src/main/res/drawable/ic_search.xml" value="0.1125" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/OYORoomsTest/app/src/main/res/layout/aa_bar_home.xml" value="0.1" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/OYORoomsTest/app/src/main/res/layout/activity_add_hotel.xml" value="0.1" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/OYORoomsTest/app/src/main/res/layout/activity_details.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/OYORoomsTest/app/src/main/res/layout/activity_home.xml" value="0.1619283065512979" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/OYORoomsTest/app/src/main/res/layout/activity_search.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/OYORoomsTest/app/src/main/res/layout/activity_splash.xml" value="0.12" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/OYORoomsTest/app/src/main/res/layout/app_bar_home.xml" value="0.1" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/OYORoomsTest/app/src/main/res/layout/custom_image_layout.xml" value="0.1" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/OYORoomsTest/app/src/main/res/layout/drawer_header.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/OYORoomsTest/app/src/main/res/layout/fragment_home.xml" value="0.1866096866096866" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/OYORoomsTest/app/src/main/res/layout/item_visitors_history.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/OYORoomsTest/app/src/main/res/layout/row_hotel_list_layout.xml" value="0.18" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/OYORoomsTest/app/src/main/res/layout/row_slider_images.xml" value="0.153125" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/OYORoomsTest/app/src/main/res/menu/drawer_menu.xml" value="0.20416666666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
