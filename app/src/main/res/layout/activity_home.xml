@@ -21,38 +21,86 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.google.android.material.appbar.AppBarLayout
+            <RelativeLayout
+                android:id="@+id/relativeLayoutToolbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:theme="@style/AppTheme.AppBarOverlay">
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/color_primary_dark"
+                android:orientation="vertical">
 
-                <androidx.appcompat.widget.Toolbar
-                    android:id="@+id/toolbar"
-                    android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
-                    android:background="?attr/colorPrimary"
-                    app:popupTheme="@style/AppTheme.PopupOverlay" />
+                <ImageView
+                    android:id="@+id/imageViewDrawer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/app_name"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:onClick="@{(v) -> viewModel.onClick(v)}"
+                    android:duplicateParentState="true"
+                    app:srcCompat="@drawable/ic_drawer" />
 
-            </com.google.android.material.appbar.AppBarLayout>
+                <com.sagar.oyoroomstest.utils.CustomTextViewMedium
+                    android:id="@+id/textViewToolbarName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/imageViewNotification"
+                    android:layout_toEndOf="@id/imageViewDrawer"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/toolbar_text_size" />
 
-            <FrameLayout
-                android:id="@+id/fragmentContainer"
+                <ImageView
+                    android:id="@+id/imageViewNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@string/app_name"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:duplicateParentState="true"
+                    app:srcCompat="@drawable/ic_baseline_notifications_none_24"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="?attr/actionBarSize" />
+                android:layout_marginTop="?attr/actionBarSize">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fabAddHotel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|end"
-                android:layout_margin="10dp"
-                android:onClick="@{(v) -> viewModel.onClick(v)}"
-                app:backgroundTint="@color/purple_200"
-                app:elevation="6dp"
-                app:pressedTranslationZ="12dp"
-                app:srcCompat="@drawable/ic_baseline_add_24"
-                android:contentDescription="@string/app_name" />
+                <FrameLayout
+                    android:id="@+id/fragmentContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/bottomNavigation"/>
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/bottomNavigation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white"
+                    app:labelVisibilityMode="labeled"
+                    app:itemTextAppearanceActive="@style/BottomNavigationView.Active"
+                    app:itemTextAppearanceInactive="@style/BottomNavigationView"
+                    app:itemIconTint="@color/bottom_navigation_selector"
+                    app:itemTextColor="@color/bottom_navigation_selector"
+                    app:menu="@menu/bottom_navigation_menu" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabAddHotel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_above="@id/bottomNavigation"
+                    android:layout_margin="10dp"
+                    android:onClick="@{(v) -> viewModel.onClick(v)}"
+                    app:backgroundTint="@color/color_primary_dark"
+                    app:srcCompat="@drawable/ic_baseline_add_24"
+                    android:contentDescription="@string/app_name" />
+            </RelativeLayout>
+
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
         <com.google.android.material.navigation.NavigationView

@@ -15,7 +15,7 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        com.sagar.oyoroomstest.databinding.ActivitySplashBinding mBinding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
+        ActivitySplashBinding mBinding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
         SplashViewModel viewModel = new SplashViewModel(this, mBinding);
         mBinding.setViewModel(viewModel);
     }

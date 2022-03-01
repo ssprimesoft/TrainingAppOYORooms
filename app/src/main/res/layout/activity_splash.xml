@@ -18,7 +18,7 @@
             android:id="@+id/imageViewSplash"
             android:layout_width="match_parent"
             android:layout_height="@dimen/splash_image_height"
-            android:src="@drawable/ic_house"
+            android:src="@drawable/app_icon"
             android:contentDescription="@string/app_name" />
 
         <TextView

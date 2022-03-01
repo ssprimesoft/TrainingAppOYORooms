@@ -24,7 +24,7 @@
                 android:id="@+id/layoutSearch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/purple_500"
+                android:background="@color/color_primary_dark"
                 android:onClick="@{(v) -> viewModel.onClick(v)}"
                 android:padding="7dp">
 

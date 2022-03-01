@@ -12,7 +12,7 @@ import com.sagar.oyoroomstest.view.SplashActivity;
 
 public class SplashViewModel extends ViewModel {
     private static final int SPLASH_TIME_OUT = 2000;
-    private final SplashActivity activity;
+    private SplashActivity activity;
     private final ActivitySplashBinding binding;
     public SplashViewModel(SplashActivity activity, ActivitySplashBinding binding) {
         this.activity = activity;

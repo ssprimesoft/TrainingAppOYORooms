@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/menu_home"
+        android:title="Home"
+        android:icon="@drawable/ic_menu_home"/>
+    <item
+        android:id="@+id/booking"
+        android:title="Bookings"
+        android:icon="@drawable/ic_menu_booking"/>
+
+    <item
+        android:id="@+id/offer"
+        android:title="Offers"
+        android:icon="@drawable/ic_menu_offer"/>
+
+    <item
+        android:id="@+id/invite"
+        android:title="Invite &amp; Earn"
+        android:icon="@drawable/ic_menu_invite_earn"/>
+
+    <item
+        android:id="@+id/help"
+        android:title="Need help"
+        android:icon="@drawable/ic_menu_help" />
+</menu>

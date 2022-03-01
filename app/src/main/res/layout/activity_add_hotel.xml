@@ -25,7 +25,7 @@
                 android:layout_height="200dp"
                 android:contentDescription="@string/app_name"
                 android:scaleType="fitXY"
-                android:src="@drawable/ic_launcher_background" />
+                android:src="@mipmap/ic_launcher" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardHotelDetails"
@@ -53,6 +53,7 @@
                         app:shapeAppearance="@style/Rounded">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTextId"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"/>
 
@@ -69,6 +70,7 @@
                         app:shapeAppearance="@style/Rounded">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTextName"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
@@ -85,6 +87,7 @@
                         app:shapeAppearance="@style/Rounded">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTextLocation"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
@@ -101,13 +104,14 @@
                         app:shapeAppearance="@style/Rounded">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTextPoster"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"/>
 
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <Button
-                        android:id="@+id/btnSubmit"
+                        android:id="@+id/buttonAddHotel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/textInputLayoutPoster"
@@ -115,9 +119,10 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="15dp"
                         android:layout_marginRight="20dp"
+                        android:background="@drawable/btn_background_element"
                         android:paddingStart="5dp"
                         android:paddingEnd="5dp"
-                        android:background="@drawable/btn_background_element"
+                        android:onClick="@{(v) -> viewModel.onClick(v)}"
                         android:text="Add Hotel Details"
                         android:textAllCaps="false"
                         android:textColor="@color/white"

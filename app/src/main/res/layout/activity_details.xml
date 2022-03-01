@@ -25,7 +25,7 @@
                 android:layout_height="200dp"
                 android:contentDescription="@string/app_name"
                 android:scaleType="fitXY"
-                android:src="@drawable/ic_launcher_background" />
+                android:src="@mipmap/ic_launcher" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardHotelDetails"

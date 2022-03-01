@@ -21,4 +21,9 @@ public class SearchActivity extends AppCompatActivity {
         viewModel = new SearchViewModel(this, mBinding);
         mBinding.setViewModel(viewModel);
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 }

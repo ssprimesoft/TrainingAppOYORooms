@@ -15,10 +15,16 @@ public class SearchViewModel extends BaseObservable {
     public SearchViewModel(SearchActivity activity, ActivitySearchBinding binding) {
         this.activity = activity;
         this.binding = binding;
+        setToolbar();
         initialiseComponants();
     }
 
+    private void setToolbar() {
+        binding.toolbar.imageViewBack.setOnClickListener(v -> activity.onBackPressed());
+        binding.toolbar.textViewToolbarName.setText("Search");
+    }
+
     private void initialiseComponants() {
-        activity.setSupportActionBar(binding.toolbar);
+
     }
 }
