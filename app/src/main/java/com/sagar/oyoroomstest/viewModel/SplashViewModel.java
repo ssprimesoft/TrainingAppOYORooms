@@ -10,9 +10,9 @@ import com.sagar.oyoroomstest.utils.ActivityController;
 import com.sagar.oyoroomstest.view.HomeActivity;
 import com.sagar.oyoroomstest.view.SplashActivity;
 
-public class SplashViewModel extends ViewModel {
+public class SplashViewModel extends BaseObservable {
     private static final int SPLASH_TIME_OUT = 2000;
-    private SplashActivity activity;
+    private final SplashActivity activity;
     private final ActivitySplashBinding binding;
     public SplashViewModel(SplashActivity activity, ActivitySplashBinding binding) {
         this.activity = activity;

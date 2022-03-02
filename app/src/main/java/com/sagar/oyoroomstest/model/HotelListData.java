@@ -3,7 +3,9 @@ package com.sagar.oyoroomstest.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class HotelListData {
+import java.io.Serializable;
+
+public class HotelListData implements Serializable {
 
     public HotelListData(String id, String name, String poster, String location) {
         this.id = id;

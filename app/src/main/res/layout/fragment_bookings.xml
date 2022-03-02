@@ -8,11 +8,54 @@
             type="com.sagar.oyoroomstest.viewModel.BookingsFragmentViewModel" />
     </data>
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
 
-    </androidx.core.widget.NestedScrollView>
+            <RelativeLayout
+                android:id="@+id/relativeLayoutStartBooking"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="?android:attr/actionBarSize">
+
+                <ImageView
+                    android:id="@+id/imageViewBookings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/booking_not_found"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/app_name" />
+
+                <com.sagar.oyoroomstest.utils.CustomTextViewMedium
+                    android:id="@+id/textViewStartBookingTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageViewBookings"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/title_start_booking"
+                    android:textColor="@color/black"/>
+                <Button
+                    android:id="@+id/buttonBookNow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewStartBookingTitle"
+                    android:text="@string/button_book_now"
+                    android:layout_marginTop="15dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/btn_background_element_green"/>
+            </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewBookings"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
 
 
 </layout>

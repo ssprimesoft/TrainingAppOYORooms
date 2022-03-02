@@ -28,6 +28,7 @@
                     android:id="@+id/ivPoster"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/home_fragment_row_height"
+                    android:scaleType="fitXY"
                     android:contentDescription="@string/app_name" />
 
                 <com.sagar.oyoroomstest.utils.CustomTextViewMedium

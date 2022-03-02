@@ -1,5 +1,6 @@
 package com.sagar.oyoroomstest.viewModel;
 
+import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
@@ -76,17 +77,28 @@ public class HomeFragmentViewModel extends BaseObservable implements View.OnClic
                 hotelListData.clear();
                 for (DataSnapshot child : dataSnapshot.getChildren()) {
 
-                    String id = child.child("id").getValue().toString();
-                    String location = child.child("location").getValue().toString();
-                    String name = child.child("name").getValue().toString();
-                    String poster = child.child("poster").getValue().toString();
+                    String id = "id";
+                    String location = "location";
+                    String name = "name";
+                    String poster = "poster";
+
+                    try{
+                        id = child.child("id").getValue().toString();
+                        location = child.child("location").getValue().toString();
+                        name = child.child("name").getValue().toString();
+                        poster = child.child("poster").getValue().toString();
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
 
                     mBinding.rvHotelList.setHasFixedSize(true);
 
                     hotelListData.add(new HotelListData(id, name, poster, location));
                     HotelListAdapter adapter = new HotelListAdapter(fragment.getActivity(), hotelListData, (view, position) -> {
                         if (view.getId() == R.id.cardViewHotel) {
-                            ActivityController.startActivity(fragment.getActivity(), DetailsActivity.class, false, false);
+                            Bundle bundle = new Bundle();
+                            bundle.putSerializable("Data", hotelListData.get(position));
+                            ActivityController.startActivity(fragment.getActivity(), DetailsActivity.class, bundle, false);
                         }
                     });
                     mBinding.rvHotelList.setAdapter(adapter);
@@ -100,7 +112,7 @@ public class HomeFragmentViewModel extends BaseObservable implements View.OnClic
     }
 
     private void setUpSlider() {
-        firebaseDatabase=FirebaseDatabase.getInstance();
+        firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReferenceFromUrl(fragment.getActivity().getString(R.string.firebase_referance_uri));
         databaseReference.child("Slider").addValueEventListener(new ValueEventListener() {
             @Override
@@ -127,7 +139,11 @@ public class HomeFragmentViewModel extends BaseObservable implements View.OnClic
                     }
                 }
                 if (dotscount > 0) {
-                    dots[0].setImageDrawable(ContextCompat.getDrawable(fragment.getActivity(), R.drawable.icon1));
+                    try {
+                        dots[0].setImageDrawable(ContextCompat.getDrawable(fragment.getActivity(), R.drawable.icon1));
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
             }
 

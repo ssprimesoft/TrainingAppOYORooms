@@ -62,6 +62,13 @@
                     android:duplicateParentState="true"
                     app:srcCompat="@drawable/ic_baseline_notifications_none_24"
                     app:tint="@color/white" />
+
+                <View
+                    android:id="@+id/viewToolbarDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/dark_grey"/>
             </RelativeLayout>
 
             <RelativeLayout

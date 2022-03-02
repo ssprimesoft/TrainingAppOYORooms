@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
@@ -19,10 +20,8 @@ import java.util.List;
 
 public class HomeSliderAdapter extends PagerAdapter {
 
-    private Context context;
-    private LayoutInflater layoutInflater;
-    private List<SliderImageListData> sliderImg;
-    private Bundle bundle;
+    private final Context context;
+    private final List<SliderImageListData> sliderImg;
 
     public HomeSliderAdapter(List sliderImg, Context context) {
         this.sliderImg = sliderImg;
@@ -35,14 +34,14 @@ public class HomeSliderAdapter extends PagerAdapter {
     }
 
     @Override
-    public boolean isViewFromObject(View view, Object object) {
+    public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
         return view == object;
     }
 
     @Override
-    public Object instantiateItem(ViewGroup container, final int position) {
+    public Object instantiateItem(@NonNull ViewGroup container, final int position) {
 
-        layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = layoutInflater.inflate(R.layout.row_slider_images, null);
 
         SliderImageListData utils = sliderImg.get(position);
@@ -59,7 +58,7 @@ public class HomeSliderAdapter extends PagerAdapter {
     }
 
     @Override
-    public void destroyItem(ViewGroup container, int position, Object object) {
+    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
 
         ViewPager vp = (ViewPager) container;
         View view = (View) object;

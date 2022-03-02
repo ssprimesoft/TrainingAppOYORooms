@@ -2,6 +2,7 @@ package com.sagar.oyoroomstest.utils;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 
 import androidx.core.app.ActivityCompat;
 
@@ -24,6 +25,22 @@ public class ActivityController {
         activity.startActivity(intent);
         if (isClearStack)
             ActivityCompat.finishAffinity(activity);
+        if (isClearPrevious)
+            activity.finish();
+    }
+
+    /**
+     * Start activity.
+     *
+     * @param activity        the activity
+     * @param clazz           the clazz
+     * @param bundle          the bundle
+     * @param isClearPrevious the is clear previous
+     */
+    public static void startActivity(Activity activity, Class clazz, Bundle bundle, boolean isClearPrevious) {
+        Intent intent = new Intent(activity, clazz);
+        intent.putExtras(bundle);
+        activity.startActivity(intent);
         if (isClearPrevious)
             activity.finish();
     }

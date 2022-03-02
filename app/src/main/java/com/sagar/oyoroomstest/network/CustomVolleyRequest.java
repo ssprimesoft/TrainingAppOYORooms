@@ -20,11 +20,11 @@ import com.android.volley.toolbox.ImageLoader;
 public class CustomVolleyRequest {
 
     private static CustomVolleyRequest customVolleyRequest;
-    private static Context context;
+    private final Context context;
+    private final ImageLoader imageLoader;
     private RequestQueue requestQueue;
-    private ImageLoader imageLoader;
 
-    private CustomVolleyRequest(Context context){
+    private CustomVolleyRequest(Context context) {
 
         this.context = context;
         this.requestQueue = getRequestQueue();
@@ -46,35 +46,24 @@ public class CustomVolleyRequest {
 
     }
 
-    public static synchronized CustomVolleyRequest getInstance(Context context){
-
-        if(customVolleyRequest == null){
+    public static synchronized CustomVolleyRequest getInstance(Context context) {
+        if (customVolleyRequest == null) {
             customVolleyRequest = new CustomVolleyRequest(context);
         }
         return customVolleyRequest;
     }
 
-    public RequestQueue getRequestQueue(){
-
-        if(requestQueue == null){
-
+    public RequestQueue getRequestQueue() {
+        if (requestQueue == null) {
             Cache cache = new DiskBasedCache(context.getCacheDir(), 10 * 1024 * 1024);
             Network network = new BasicNetwork(new HurlStack());
             requestQueue = new RequestQueue(cache, network);
             requestQueue.start();
-
         }
         return requestQueue;
     }
 
-    public  void addToRequestQueue(Request req) {
-        getRequestQueue().add(req);
-    }
-
-    public ImageLoader getImageLoader(){
-
+    public ImageLoader getImageLoader() {
         return imageLoader;
-
     }
-
 }

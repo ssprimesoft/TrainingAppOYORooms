@@ -20,8 +20,7 @@ public class HomeActivityTest {
 
     @Test
     public void test_Activity(){
-
-        ActivityScenario<HomeActivity> activityScenario = ActivityScenario.launch(HomeActivity.class);
+        ActivityScenario.launch(HomeActivity.class);
         onView(withId(R.id.drawerLayout)).check(matches(isDisplayed()));
     }
 }

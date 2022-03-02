@@ -4,7 +4,6 @@
     xmlns:card_view="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="viewModel"
             type="com.sagar.oyoroomstest.viewModel.AddHotelViewModel" />
@@ -48,7 +47,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                        android:hint="Id"
+                        android:hint="@string/id"
                         android:layout_margin="5dp"
                         app:shapeAppearance="@style/Rounded">
 
@@ -65,7 +64,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/textInputLayoutId"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                        android:hint="Hotel Name"
+                        android:hint="@string/add_hotel_name"
                         android:layout_margin="5dp"
                         app:shapeAppearance="@style/Rounded">
 
@@ -82,7 +81,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/textInputLayoutName"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                        android:hint="Location"
+                        android:hint="@string/add_hotel_location"
                         android:layout_margin="5dp"
                         app:shapeAppearance="@style/Rounded">
 
@@ -99,7 +98,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/textInputLayoutLocation"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                        android:hint="Poster"
+                        android:hint="@string/add_hotel_poster"
                         android:layout_margin="5dp"
                         app:shapeAppearance="@style/Rounded">
 
@@ -123,10 +122,10 @@
                         android:paddingStart="5dp"
                         android:paddingEnd="5dp"
                         android:onClick="@{(v) -> viewModel.onClick(v)}"
-                        android:text="Add Hotel Details"
+                        android:text="@string/button_add_hotel_details"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
-                        android:textSize="15dp" />
+                        android:textSize="15sp" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>

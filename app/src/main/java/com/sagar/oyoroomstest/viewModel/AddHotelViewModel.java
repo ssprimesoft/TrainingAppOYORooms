@@ -11,32 +11,25 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.sagar.oyoroomstest.R;
 import com.sagar.oyoroomstest.databinding.ActivityAddHotelBinding;
-import com.sagar.oyoroomstest.databinding.ActivityDetailsBinding;
 import com.sagar.oyoroomstest.model.HotelListData;
 import com.sagar.oyoroomstest.network.CustomVolleyRequest;
-import com.sagar.oyoroomstest.utils.StringUtils;
 import com.sagar.oyoroomstest.view.AddHotelActivity;
-import com.sagar.oyoroomstest.view.DetailsActivity;
 
 import java.util.Objects;
 
 public class AddHotelViewModel extends BaseObservable {
-    private AddHotelActivity activity;
-    private ActivityAddHotelBinding binding;
-    private DatabaseReference databaseReference;
-    public FirebaseDatabase firebaseDatabase;
+    private final AddHotelActivity activity;
+    private final ActivityAddHotelBinding binding;
 
     public AddHotelViewModel(AddHotelActivity activity, ActivityAddHotelBinding binding) {
         this.activity = activity;
         this.binding = binding;
-        initialiseComponants();
+        initialiseComponents();
     }
 
-    private void initialiseComponants() {
+    private void initialiseComponents() {
         ImageLoader imageLoader = CustomVolleyRequest.getInstance(activity).getImageLoader();
         imageLoader.get(activity.getString(R.string.icon_uri), ImageLoader.getImageListener(binding.imageViewPoster, R.mipmap.ic_launcher, R.mipmap.ic_launcher));
-
-
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -81,8 +74,8 @@ public class AddHotelViewModel extends BaseObservable {
     }
 
     private void addHotel() {
-        firebaseDatabase=FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReferenceFromUrl(activity.getString(R.string.firebase_referance_uri));
+        FirebaseDatabase firebaseDatabase=FirebaseDatabase.getInstance();
+        DatabaseReference databaseReference = firebaseDatabase.getReferenceFromUrl(activity.getString(R.string.firebase_referance_uri));
 
         HotelListData hotelListData= new HotelListData(binding.editTextId.getText().toString().trim(),
                 binding.editTextName.getText().toString().trim(),
